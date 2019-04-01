@@ -1,0 +1,30 @@
+#include "pch.h"
+#include "firstjoin.h"
+#include <iostream>
+#include <string>
+#include <algorithm>
+#include <fstream>
+
+int main() {
+
+	std::system("title SimHack  V1.0.1");
+	std::system("color 7c");
+	std::cout << "\t\t\t\t\tChecking if save files exist..\n.";
+	std::system("timeout 2 >NUL");
+
+	ifstream ifile("save.sav");
+
+	if (ifile) {
+
+	}
+	else {
+		std::system("cls");
+		std::cout << "\t\t\t\t\tERROR 404: FILE NOT FOUND.\n";
+		std::cout << "\t\t\t\tThis could be because this is your first time\n";
+		std::cout << "\t\t\t\tBooting this game or your save file got deleted!\n";
+		std::system("timeout 3 > NUL");
+		std::system("cls");
+		firstjoin();
+
+	}
+}
